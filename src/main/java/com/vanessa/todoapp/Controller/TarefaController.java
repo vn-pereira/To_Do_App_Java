@@ -16,15 +16,16 @@ public class TarefaController {
 	
 	//função
 	@PostMapping
-	public ResponseEntity<TarefaResponse> adicionaTarefa (@RequestBody TarefaRequest requisicao) {
+	public ResponseEntity<String> adicionaTarefa (@RequestBody TarefaRequest requisicao) {
+		return ResponseEntity.ok("hello world");
 		
-		TarefaModel recebeDados = requisicao.retornaDominioTarefa();
+		/*TarefaModel recebeDados = requisicao.retornaDominioTarefa();
 		
 				String titulo = recebeDados.getTitulo();
 				String descricao = recebeDados.getDescricao();				 
 		
 		//criando obj
 		new TarefaModel (requisicao.getTitulo(), requisicao.getDescricao());
-		//System.out.println(requisicao.getTitulo());
+		//System.out.println(requisicao.getTitulo());*/
 	}
 } 
